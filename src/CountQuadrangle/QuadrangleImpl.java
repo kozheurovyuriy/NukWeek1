@@ -61,148 +61,148 @@ public class QuadrangleImpl implements Quadrangleable{
     }
 
     @Override
-    public long countOfQuadrate(List<QuadrangleImpl> quadrangleImplList){
-        return quadrangleImplList.stream().filter(QuadrangleImpl::isQuadrate).count();
+    public long countOfQuadrate(List<Quadrangleable> quadrangleImplList){
+        return quadrangleImplList.stream().filter(Quadrangleable::isQuadrate).count();
     }
 
     @Override
-    public long countOfRhombus(List<QuadrangleImpl> quadrangleImplList){
-        return quadrangleImplList.stream().filter(QuadrangleImpl::isRhombus).count();
+    public long countOfRhombus(List<Quadrangleable> quadrangleImplList){
+        return quadrangleImplList.stream().filter(Quadrangleable::isRhombus).count();
     }
 
     @Override
-    public long countOfRectangle(List<QuadrangleImpl> quadrangleImplList){
-        return quadrangleImplList.stream().filter(QuadrangleImpl::isRectangle).count();
+    public long countOfRectangle(List<Quadrangleable> quadrangleImplList){
+        return quadrangleImplList.stream().filter(Quadrangleable::isRectangle).count();
     }
 
     @Override
-    public long countOfRandomQuadrangle(List<QuadrangleImpl> quadrangleImplList){
-        return quadrangleImplList.stream().filter(QuadrangleImpl::isRandomQuadrangle).count();
+    public long countOfRandomQuadrangle(List<Quadrangleable> quadrangleImplList){
+        return quadrangleImplList.stream().filter(Quadrangleable::isRandomQuadrangle).count();
     }
 
     @Override
-    public double getSquareBiggestQuadrate(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isQuadrate)
-                .max(Comparator.comparing(QuadrangleImpl::getSquare));
-        return max.map(QuadrangleImpl::getSquare).orElse(0.0);
+    public double getSquareBiggestQuadrate(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isQuadrate)
+                .max(Comparator.comparing(Quadrangleable::getSquare));
+        return max.map(Quadrangleable::getSquare).orElse(0.0);
     }
 
     @Override
-    public double getSquareBiggestRhombus(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRhombus)
-                .max(Comparator.comparing(QuadrangleImpl::getSquare));
-        return max.map(QuadrangleImpl::getSquare).orElse(0.0);
+    public double getSquareBiggestRhombus(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRhombus)
+                .max(Comparator.comparing(Quadrangleable::getSquare));
+        return max.map(Quadrangleable::getSquare).orElse(0.0);
     }
 
     @Override
-    public double getSquareBiggestRectangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRectangle)
-                .max(Comparator.comparing(QuadrangleImpl::getSquare));
-        return max.map(QuadrangleImpl::getSquare).orElse(0.0);
+    public double getSquareBiggestRectangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRectangle)
+                .max(Comparator.comparing(Quadrangleable::getSquare));
+        return max.map(Quadrangleable::getSquare).orElse(0.0);
     }
 
     @Override
-    public double getSquareBiggestRandomQuadrangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRandomQuadrangle)
-                .max(Comparator.comparing(QuadrangleImpl::getSquare));
-        return max.map(QuadrangleImpl::getSquare).orElse(0.0);
+    public double getSquareBiggestRandomQuadrangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRandomQuadrangle)
+                .max(Comparator.comparing(Quadrangleable::getSquare));
+        return max.map(Quadrangleable::getSquare).orElse(0.0);
     }
 
     @Override
-    public double getSquareSmallestQuadrate(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isQuadrate)
-                .min(Comparator.comparing(QuadrangleImpl::getSquare));
-        return min.map(QuadrangleImpl::getSquare).orElse(0.0);
+    public double getSquareSmallestQuadrate(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isQuadrate)
+                .min(Comparator.comparing(Quadrangleable::getSquare));
+        return min.map(Quadrangleable::getSquare).orElse(0.0);
     }
 
     @Override
-    public double getSquareSmallestRhombus(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRhombus)
-                .min(Comparator.comparing(QuadrangleImpl::getSquare));
-        return min.map(QuadrangleImpl::getSquare).orElse(0.0);    }
+    public double getSquareSmallestRhombus(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRhombus)
+                .min(Comparator.comparing(Quadrangleable::getSquare));
+        return min.map(Quadrangleable::getSquare).orElse(0.0);    }
 
     @Override
-    public double getSquareSmallestRectangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRectangle)
-                .min(Comparator.comparing(QuadrangleImpl::getSquare));
-        return min.map(QuadrangleImpl::getSquare).orElse(0.0);    }
+    public double getSquareSmallestRectangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRectangle)
+                .min(Comparator.comparing(Quadrangleable::getSquare));
+        return min.map(Quadrangleable::getSquare).orElse(0.0);    }
 
     @Override
-    public double getSquareSmallestRandomQuadrangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRandomQuadrangle)
-                .min(Comparator.comparing(QuadrangleImpl::getSquare));
-        return min.map(QuadrangleImpl::getSquare).orElse(0.0);    }
+    public double getSquareSmallestRandomQuadrangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRandomQuadrangle)
+                .min(Comparator.comparing(Quadrangleable::getSquare));
+        return min.map(Quadrangleable::getSquare).orElse(0.0);    }
 
     @Override
-    public double getPerimeterBiggestQuadrate(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isQuadrate)
-                .max(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return max.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterBiggestQuadrate(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isQuadrate)
+                .max(Comparator.comparing(Quadrangleable::getPerimeter));
+        return max.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     @Override
-    public double getPerimeterBiggestRhombus(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRhombus)
-                .max(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return max.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterBiggestRhombus(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRhombus)
+                .max(Comparator.comparing(Quadrangleable::getPerimeter));
+        return max.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     @Override
-    public double getPerimeterBiggestRectangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRectangle)
-                .max(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return max.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterBiggestRectangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRectangle)
+                .max(Comparator.comparing(Quadrangleable::getPerimeter));
+        return max.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     @Override
-    public double getPerimeterBiggestRandomQuadrangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> max = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRandomQuadrangle)
-                .max(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return max.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterBiggestRandomQuadrangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> max = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRandomQuadrangle)
+                .max(Comparator.comparing(Quadrangleable::getPerimeter));
+        return max.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     @Override
-    public double getPerimeterSmallestQuadrate(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isQuadrate)
-                .min(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return min.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterSmallestQuadrate(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isQuadrate)
+                .min(Comparator.comparing(Quadrangleable::getPerimeter));
+        return min.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     @Override
-    public double getPerimeterSmallestRhombus(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRhombus)
-                .min(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return min.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterSmallestRhombus(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRhombus)
+                .min(Comparator.comparing(Quadrangleable::getPerimeter));
+        return min.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     @Override
-    public double getPerimeterSmallestRectangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRectangle)
-                .min(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return min.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterSmallestRectangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRectangle)
+                .min(Comparator.comparing(Quadrangleable::getPerimeter));
+        return min.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     @Override
-    public double getPerimeterSmallestRandomQuadrangle(List<QuadrangleImpl> quadrangleImplList) {
-        Optional<QuadrangleImpl> min = quadrangleImplList.stream()
-                .filter(QuadrangleImpl::isRandomQuadrangle)
-                .min(Comparator.comparing(QuadrangleImpl::getPerimeter));
-        return min.map(QuadrangleImpl::getPerimeter).orElse(0.0);
+    public double getPerimeterSmallestRandomQuadrangle(List<Quadrangleable> quadrangleImplList) {
+        Optional<Quadrangleable> min = quadrangleImplList.stream()
+                .filter(Quadrangleable::isRandomQuadrangle)
+                .min(Comparator.comparing(Quadrangleable::getPerimeter));
+        return min.map(Quadrangleable::getPerimeter).orElse(0.0);
     }
 
     private double getSegmentLength(Point pointA, Point pointB){
